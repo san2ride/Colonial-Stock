@@ -1,14 +1,14 @@
 //
-//  MyAccountViewController.swift
+//  MyColonialViewController.swift
 //  Colonial Stock
 //
-//  Created by don't touch me on 10/3/16.
+//  Created by don't touch me on 10/5/16.
 //  Copyright © 2016 trvl, LLC. All rights reserved.
 //
 
 import UIKit
 
-class MyAccountViewController: UIViewController {
+class MyColonialViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

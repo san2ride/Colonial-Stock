@@ -17,18 +17,47 @@
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="colonialnewlogo" translatesAutoresizingMaskIntoConstraints="NO" id="pXd-pY-LS6">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="LKw-vZ-0GO"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="login, email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Knq-AB-Qsp">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="login, password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KsX-dU-c4p">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KsX-dU-c4p" firstAttribute="trailing" secondItem="Knq-AB-Qsp" secondAttribute="trailing" id="Lt4-e7-zeY"/>
+                            <constraint firstItem="pXd-pY-LS6" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="Pcg-iP-kbr"/>
+                            <constraint firstItem="Knq-AB-Qsp" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="8" id="VHB-vx-Na8"/>
+                            <constraint firstItem="Knq-AB-Qsp" firstAttribute="top" secondItem="pXd-pY-LS6" secondAttribute="bottom" id="cFa-if-Pes"/>
+                            <constraint firstItem="KsX-dU-c4p" firstAttribute="leading" secondItem="Knq-AB-Qsp" secondAttribute="leading" id="cRu-Cl-Kxf"/>
+                            <constraint firstItem="pXd-pY-LS6" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="gZC-om-hAJ"/>
+                            <constraint firstAttribute="trailing" secondItem="Knq-AB-Qsp" secondAttribute="trailing" constant="8" id="ghb-ue-di1"/>
+                            <constraint firstAttribute="trailing" secondItem="pXd-pY-LS6" secondAttribute="trailing" id="j5R-bj-AP4"/>
+                            <constraint firstItem="Knq-AB-Qsp" firstAttribute="centerX" secondItem="pXd-pY-LS6" secondAttribute="centerX" id="xVc-rD-qo5"/>
+                            <constraint firstItem="KsX-dU-c4p" firstAttribute="top" secondItem="Knq-AB-Qsp" secondAttribute="bottom" constant="3" id="yRd-2q-kIu"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-422" y="-349"/>
+            <point key="canvasLocation" x="-423.19999999999999" y="-349.47526236881561"/>
         </scene>
-        <!--Login-->
+        <!--More-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Colonial_Stock" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="MoreViewController" customModule="Colonial_Stock" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -36,15 +65,30 @@
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="colonialnewlogo" translatesAutoresizingMaskIntoConstraints="NO" id="PRH-bD-1uY">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="h4f-ah-IhE"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="PRH-bD-1uY" secondAttribute="trailing" id="cXW-D9-q3S"/>
+                            <constraint firstItem="PRH-bD-1uY" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="cx5-7n-9oD"/>
+                            <constraint firstItem="PRH-bD-1uY" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="jPD-Nn-LBH"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Login" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="More" image="more" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="colonialImageView" destination="PRH-bD-1uY" id="X87-c9-aYr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-423" y="460"/>
+            <point key="canvasLocation" x="-423.19999999999999" y="1045.7271364317842"/>
         </scene>
-        <!--My Account-->
+        <!--My Colonial-->
         <scene sceneID="QTx-Ui-LS7">
             <objects>
                 <viewController id="jHz-93-Juk" customClass="MyAccountViewController" customModule="Colonial_Stock" customModuleProvider="target" sceneMemberID="viewController">
@@ -57,40 +101,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Account" id="rTi-p6-Avj"/>
+                    <tabBarItem key="tabBarItem" title="My Colonial" image="stock" id="rTi-p6-Avj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vZ9-3g-iW2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1030" y="1113"/>
-        </scene>
-        <!--More-->
-        <scene sceneID="G6f-EI-Gjv">
-            <objects>
-                <tableViewController id="qLd-0E-js1" customClass="MoreTableViewController" customModule="Colonial_Stock" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ynl-Oy-q11">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dGr-rh-fw4">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dGr-rh-fw4" id="pDK-Xb-3t6">
-                                    <frame key="frameInset" width="375" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="qLd-0E-js1" id="7Gj-nm-dsp"/>
-                            <outlet property="delegate" destination="qLd-0E-js1" id="uSP-qt-BP3"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="More" id="NFf-kk-Xp5"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TgC-hn-udn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2188" y="1114"/>
+            <point key="canvasLocation" x="-423" y="351"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -105,9 +120,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="jHz-93-Juk" kind="relationship" relationship="viewControllers" id="fSm-Ux-dUs"/>
-                        <segue destination="qLd-0E-js1" kind="relationship" relationship="viewControllers" id="EWP-Cc-7Sb"/>
+                        <segue destination="jHz-93-Juk" kind="relationship" relationship="viewControllers" id="s9H-NS-UWV"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="sQV-ow-MbW"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -116,7 +130,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="colonialnewlogo" width="500" height="164"/>
+        <image name="home" width="32" height="32"/>
+        <image name="more" width="32" height="32"/>
+        <image name="stock" width="32" height="32"/>
     </resources>
 </document>
