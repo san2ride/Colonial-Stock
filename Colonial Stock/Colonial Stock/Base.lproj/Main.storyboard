@@ -66,32 +66,85 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="34" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qtG-M9-h11">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="34" id="Ed9-Lf-AXO">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="34"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ed9-Lf-AXO" id="ojt-C1-I74">
+                                            <frame key="frameInset" width="375" height="33"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="8rJ-Kc-sve" id="czW-2e-WO2"/>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="sbj-xU-hOR"/>
+                                </connections>
+                            </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="colonialnewlogo" translatesAutoresizingMaskIntoConstraints="NO" id="PRH-bD-1uY">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="125" id="h4f-ah-IhE"/>
+                                    <constraint firstAttribute="height" constant="125" id="c4I-6q-QHz"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRm-N3-kdp">
+                                <string key="text">Colonial Stock Transfer Company, Inc.
+66 Exchange Place, 1st floor
+Salt Lake City, UT 84111</string>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Phone: 801-355-5740" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4g-Fp-v9u">
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPU-c9-vp5">
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="752" text="Hours of operation: 9:00 am - 5:00 pm MST, Monday thru Friday, except stock market holidays." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3IZ-bC-BWr">
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="PRH-bD-1uY" secondAttribute="trailing" id="cXW-D9-q3S"/>
-                            <constraint firstItem="PRH-bD-1uY" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="cx5-7n-9oD"/>
-                            <constraint firstItem="PRH-bD-1uY" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="jPD-Nn-LBH"/>
+                            <constraint firstItem="PRH-bD-1uY" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" constant="3" id="0w3-r3-6xP"/>
+                            <constraint firstAttribute="trailing" secondItem="3IZ-bC-BWr" secondAttribute="trailing" constant="3" id="8uo-0j-OBf"/>
+                            <constraint firstItem="qtG-M9-h11" firstAttribute="trailing" secondItem="PRH-bD-1uY" secondAttribute="trailing" id="9GJ-0N-vzn"/>
+                            <constraint firstAttribute="trailing" secondItem="YRm-N3-kdp" secondAttribute="trailing" constant="3" id="AgP-as-udQ"/>
+                            <constraint firstItem="qtG-M9-h11" firstAttribute="bottom" secondItem="Djb-ko-YwX" secondAttribute="top" id="BfU-bp-buS"/>
+                            <constraint firstItem="L4g-Fp-v9u" firstAttribute="top" secondItem="YRm-N3-kdp" secondAttribute="bottom" constant="20" id="DbL-0x-2PJ"/>
+                            <constraint firstItem="3IZ-bC-BWr" firstAttribute="top" secondItem="wPU-c9-vp5" secondAttribute="bottom" constant="15.5" id="EMl-Jm-JX7"/>
+                            <constraint firstItem="wPU-c9-vp5" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" constant="3" id="GjE-3y-Bqt"/>
+                            <constraint firstItem="wPU-c9-vp5" firstAttribute="top" secondItem="L4g-Fp-v9u" secondAttribute="bottom" constant="12.5" id="Iog-8E-FFx"/>
+                            <constraint firstItem="3IZ-bC-BWr" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" constant="3" id="QUY-0m-6Wj"/>
+                            <constraint firstItem="L4g-Fp-v9u" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" constant="3" id="Sad-6S-L6C"/>
+                            <constraint firstAttribute="trailing" secondItem="PRH-bD-1uY" secondAttribute="trailing" id="Xvz-FT-Dh7"/>
+                            <constraint firstAttribute="trailing" secondItem="wPU-c9-vp5" secondAttribute="trailing" constant="3" id="a0d-bK-KgZ"/>
+                            <constraint firstItem="YRm-N3-kdp" firstAttribute="top" secondItem="PRH-bD-1uY" secondAttribute="bottom" constant="15" id="arg-cQ-TzN"/>
+                            <constraint firstItem="qtG-M9-h11" firstAttribute="top" secondItem="3IZ-bC-BWr" secondAttribute="bottom" constant="18" id="dN5-7z-ssp"/>
+                            <constraint firstItem="qtG-M9-h11" firstAttribute="leading" secondItem="PRH-bD-1uY" secondAttribute="leading" id="gof-EP-eaX"/>
+                            <constraint firstAttribute="trailing" secondItem="L4g-Fp-v9u" secondAttribute="trailing" constant="3" id="kZu-p5-2kV"/>
+                            <constraint firstItem="PRH-bD-1uY" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="sKB-wP-wQk"/>
+                            <constraint firstItem="YRm-N3-kdp" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" constant="3" id="w3z-Jq-hpM"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="More" image="more" id="cPa-gy-q4n"/>
-                    <connections>
-                        <outlet property="colonialImageView" destination="PRH-bD-1uY" id="X87-c9-aYr"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-423.19999999999999" y="1045.7271364317842"/>
+            <point key="canvasLocation" x="-1607.2" y="1038.5307346326838"/>
         </scene>
         <!--My Colonial-->
         <scene sceneID="QTx-Ui-LS7">
             <objects>
-                <viewController id="jHz-93-Juk" customClass="MyAccountViewController" customModule="Colonial_Stock" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jHz-93-Juk" customClass="MyColonialViewController" customModule="Colonial_Stock" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6wO-jw-qzP"/>
                         <viewControllerLayoutGuide type="bottom" id="jdm-E2-vLd"/>
@@ -99,13 +152,25 @@
                     <view key="view" contentMode="scaleToFill" id="jzl-OP-l1O">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="colonialnewlogo" translatesAutoresizingMaskIntoConstraints="NO" id="k7m-Zt-cce">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="rpE-Ae-cqs"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="k7m-Zt-cce" firstAttribute="top" secondItem="jzl-OP-l1O" secondAttribute="top" id="60J-L1-oLi"/>
+                            <constraint firstItem="k7m-Zt-cce" firstAttribute="leading" secondItem="jzl-OP-l1O" secondAttribute="leading" id="6ZO-yX-OE0"/>
+                            <constraint firstAttribute="trailing" secondItem="k7m-Zt-cce" secondAttribute="trailing" id="Jh0-fo-C99"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Colonial" image="stock" id="rTi-p6-Avj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vZ9-3g-iW2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-423" y="351"/>
+            <point key="canvasLocation" x="-423.19999999999999" y="350.37481259370315"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
